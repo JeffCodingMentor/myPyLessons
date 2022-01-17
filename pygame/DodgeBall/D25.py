@@ -20,7 +20,7 @@ RED   = (255,   0,   0)
 GREEN = (  0, 255,   0)
 BLUE  = (  0,   0, 255)
 
-
+CDTIMEUP = pygame.USEREVENT + 1
 
 #球的類別
 class Ball(pygame.sprite.Sprite):
@@ -76,7 +76,6 @@ def main():
 
     score = 0
     cooldowntime = 0 
-    CDTIMEUP = pygame.USEREVENT + 1
     pygame.init()
     screen = pygame.display.set_mode((SCREEN_WIDTH,SCREEN_HEIGHT))
     pygame.display.set_caption("Dodge Ball")
@@ -99,6 +98,7 @@ def main():
             elif event.type == CDTIMEUP:  #冷卻時間到
                 cooldowntime = 0
                 cat.normal()              #變回原來顏色
+                pygame.time.set_timer(CDTIMEUP, 0)
     
         #計算
         ball.update()
