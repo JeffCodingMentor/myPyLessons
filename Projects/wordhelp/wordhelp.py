@@ -5,13 +5,10 @@ wordhelp.py
 
 @author: JCM
 """
-
-#import createdict
-import allwords
 import random
-
-#candidates = createdict.getdict()  #use this if dictionary.txt is ever changed
+import allwords
 candidates = allwords.allwords
+
 k=0
 while k<6:
     print(len(candidates))

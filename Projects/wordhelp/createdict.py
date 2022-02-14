@@ -6,24 +6,22 @@ learned from https://stackoverflow.com/questions/4456446/dictionary-text-file
 @author: JCM
 """
 def getdict():
-    dict = []
+    dictionary = []
     with open("dictionary.txt") as f:
         word = f.readline()
         while word!="":
             if len(word)==6:   #there is a '\n' behind
-                dict.append(word[0:5])
+                dictionary.append(word[0:5])
             word = f.readline()
-    return dict
-    
-    
+    return dictionary
 
 if __name__ == "__main__":
-    dict = getdict()
-    print(len(dict))
+    dictionary = getdict()
+    print(len(dictionary))
     #print(dict)
     
     str1 = "allwords=['"
-    str1+= "','".join(dict)
+    str1+= "','".join(dictionary)
     str1+= "']"
     
     with open("allwords.py", "w") as f:
