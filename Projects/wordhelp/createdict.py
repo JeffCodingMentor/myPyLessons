@@ -22,11 +22,11 @@ if __name__ == "__main__":
     print(len(dict))
     #print(dict)
     
-    str1 = "allwords=["
-    for word in dict:
-        str1 += "'"+word+"',"
-    str1 = str1[:-1]+"]"
+    str1 = "allwords=['"
+    str1+= "','".join(dict)
+    str1+= "']"
     
     with open("allwords.py", "w") as f:
         f.write(str1)
     
+

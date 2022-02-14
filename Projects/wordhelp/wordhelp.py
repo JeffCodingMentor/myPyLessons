@@ -12,20 +12,27 @@ import random
 
 #candidates = createdict.getdict()  #use this if dictionary.txt is ever changed
 candidates = allwords.allwords
-
-for k in range(6):
+k=0
+while k<6:
     print(len(candidates))
     if len(candidates)==0:
         print("Something wrong")
         break
     
-    guess = random.choice(candidates)
+    guess = input(f"attemp {k+1}, guess: ")
+    
+    if guess == "": 
+        guess = random.choice(candidates)
+        
     print(guess)
     result = input("result: ")
     
     if result == "vvvvv":
         print("Congratulations")
         break
+    
+    if result =="":
+        continue
     
     temp_candidate = candidates[:]
     for check_word in candidates:
@@ -51,3 +58,5 @@ for k in range(6):
     
     candidates = temp_candidate
     if(len(candidates)<150): print(candidates)
+    
+    k+=1
