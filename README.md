@@ -8,5 +8,7 @@ Folder Description:
 4. pygame/DodgeBall: migrate the Catty Dodgeball game from Scratch
 5. pygame/Galaga: Galaga game from Scratch
 6. pygame/Lorenz: Drawing a Lorenz Attractor with pygame
+7. projects/wordhelp: Wordle guessing helper
+8. projects/Snake: Snake Game using turtle
 
 All files are individual except images/sounds.
